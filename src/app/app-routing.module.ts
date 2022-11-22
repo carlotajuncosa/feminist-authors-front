@@ -1,3 +1,5 @@
+import { ContributeComponent } from './components/contribute/contribute.component';
+import { AuthorsDetailsComponent } from './pages/authors/authors-details/authors-details.component';
 import { WavesComponent } from './pages/waves/waves.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HackersComponent } from './pages/hackers/hackers.component';
@@ -12,9 +14,9 @@ const routes: Routes = [
   {path: 'authors', component: AuthorsComponent},
   {path: 'hackers', component: HackersComponent},
   {path: 'waves', component: WavesComponent},
-  {path: 'about', component: AboutComponent}
-  
-  /* {path: 'characters/:id', component: HackersComponent},*/
+  {path: 'about', component: AboutComponent},
+  {path: 'authors/:id', component: AuthorsDetailsComponent},
+  {path: 'contribute', component: ContributeComponent},
   
 ];
 @NgModule({

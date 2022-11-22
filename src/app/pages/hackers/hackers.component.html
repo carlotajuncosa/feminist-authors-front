@@ -1,6 +1,11 @@
 <div *ngFor="let item of myHackers">
-    <p>{{item.name}}</p>
-    <p>{{item.description}}</p>
-    <a href="{{item.url}}" target="_blank">See more</a>
-    <img src="{{item.img}}" alt="hackers image" height="300px"/>
+  <p>{{ item.name }}</p>
+  <p>{{ item.description }}</p>
+  <a href="{{ item.url }}" target="_blank">See more</a>
+  <img
+    *ngIf="item.img"
+    src="{{ item.img }}"
+    alt="hackers image"
+    height="300px"
+  />
 </div>

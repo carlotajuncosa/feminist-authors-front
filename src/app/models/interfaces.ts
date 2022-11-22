@@ -8,7 +8,7 @@ export interface IAuthorImg {
   }
 
 export interface IAuthors {
-    _id: number;
+    _id: string;
     name: string;
     birthdate: string;
     deathdate: string;

@@ -13,6 +13,8 @@ import { RouterLink } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthorsDetailsComponent } from './pages/authors/authors-details/authors-details.component';
+import { ContributeComponent } from './components/contribute/contribute.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     WavesComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    AuthorsDetailsComponent,
+    ContributeComponent
   ],
   imports: [
     BrowserModule,

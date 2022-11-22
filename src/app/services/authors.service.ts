@@ -17,8 +17,8 @@ export class AuthorsService {
     return this.http.get("https://feminist-authors.vercel.app/authors/"+ id);
   }
 
-  public postAuthor(newCharacter:any){
-    return this.http.post("https://feminist-authors.vercel.app/authors/create", newCharacter);
+  public postAuthor(newAuthor:any){
+    return this.http.post("https://feminist-authors.vercel.app/authors/create", newAuthor);
   }
 
   public deleteAuthor(id: string){

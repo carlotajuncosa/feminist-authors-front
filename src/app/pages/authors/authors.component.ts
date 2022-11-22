@@ -1,5 +1,7 @@
+import { IAuthors } from './../../models/interfaces';
 import { Component, OnInit } from '@angular/core';
 import { AuthorsService } from '../../services/authors.service';
+
 
 @Component({
   selector: 'app-authors',
@@ -13,7 +15,7 @@ export class AuthorsComponent implements OnInit {
     this.authorsservice.getAllAuthors().subscribe((data: any) => {
       console.log(data);
 
-      const authorsData: any[] = data.map((author: any) => ({
+      const authorsData: any[] = data.map((author: IAuthors) => ({
         id: author._id,
         name: author.name,
         birthdate: author.birthdate,
@@ -21,6 +23,7 @@ export class AuthorsComponent implements OnInit {
         ocupation: author.ocupation,
         zodiacsign: author.zodiacsign,
         image: author.authorImg,
+        mostAwardWork: author.mostAwardWork,
       }));
 
       this.myAuthors = [...authorsData];

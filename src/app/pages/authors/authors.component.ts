@@ -1,15 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthorsService } from '../../services/authors.service';
 
 @Component({
   selector: 'app-authors',
   templateUrl: './authors.component.html',
-  styleUrls: ['./authors.component.css']
+  styleUrls: ['./authors.component.css'],
 })
 export class AuthorsComponent implements OnInit {
+  myAuthors?: any[];
 
-  constructor() { }
+  constructor(private authorsservice: AuthorsService) {
+    this.authorsservice.getAllAuthors().subscribe((data: any) => {
+      console.log(data);
 
-  ngOnInit(): void {
+      const authorsData: any[] = data.map((author: any) => ({
+        id: author._id,
+        name: author.name,
+        birthdate: author.birthdate,
+        deathdate: author.deathdate,
+        ocupation: author.ocupation,
+        zodiacsign: author.zodiacsign,
+        image: author.authorImg,
+      }));
+
+      this.myAuthors = [...authorsData];
+    });
   }
 
+  ngOnInit(): void {}
 }

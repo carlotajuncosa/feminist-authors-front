@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import './reset.css';
+@font-face {
+    font-family: 'forrest';
+    src: url(./assets/Forrest-Light.otf);
+}
+
+
+p, h2, h3, h4 , a{
+    font-family: forrest;
+    font-size: 1em;
+}
+h1{
+    font-family: forrest;
+    font-size: 4em;
+    text-align: center;
+    color: white
+}
+

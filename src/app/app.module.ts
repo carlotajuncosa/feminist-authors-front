@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthorsDetailsComponent } from './pages/authors/authors-details/authors-details.component';
 import { ContributeComponent } from './components/contribute/contribute.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ContributeComponent } from './components/contribute/contribute.componen
     FooterComponent,
     HomeComponent,
     AuthorsDetailsComponent,
-    ContributeComponent
+    ContributeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

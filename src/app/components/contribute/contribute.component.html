@@ -1,11 +1,12 @@
-<p>Add, update or delete an author:</p>
-<!-- <form [formGroup]="authorForm" (ngSubmit)="onSubmit()">
-
-    <input type="text" placeholder="name" formControlName="name">
-    <input type="file" placeholder="imagen" formControlName="img" (change)="onFileChange($event)">
-    <button >añadir</button>
-
-</form> -->
-
-<p>Add, update or delete a wave.</p>
-<p>Add, update or delete a hacker.</p>
+<form [formGroup]="authorForm" (ngSubmit)="onSubmit()">
+  <input type="text" placeholder="name" formControlName="name" />
+  <input type="date" placeholder="birthdate" formControlName="birthdate" />
+  <input type="date" placeholder="deathdate" formControlName="deathdate" />
+  <input type="text" placeholder="nationality" formControlName="nationality" />
+  <input type="text" placeholder="ocupation" formControlName="ocupation" />
+  <input type="text" placeholder="zodiacSign" formControlName="zodiacSign" />
+  <input type="file" formControlName="authorImg" (change)="onFileChange($event)">
+  <input type="text" placeholder="title" formControlName="title" />
+  <input type="file" formControlName="img" (change)="onFileChange($event)">
+  <button type="submit">añadir</button>
+</form>

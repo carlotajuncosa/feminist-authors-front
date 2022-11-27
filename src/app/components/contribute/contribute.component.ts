@@ -1,77 +1,76 @@
-import { AuthorsService } from './../../services/authors.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { IAuthors } from 'src/app/models/interfaces';
+import { AuthorsService } from './../../services/authors.service';
 
 @Component({
   selector: 'app-contribute',
   templateUrl: './contribute.component.html',
-  styleUrls: ['./contribute.component.css']
-}) 
+  styleUrls: ['./contribute.component.css'],
+})
 export class ContributeComponent implements OnInit {
-  /* newAuthor: IAuthors ={
-    name: '',
-    birthdate: '',
-    deathdate: '',
-  }; */
   authorsForm!: FormGroup;
-  
-  constructor() { }
-
-  ngOnInit(): void {
-    /* this.authorForm = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      birthdate: ['', [Validators.required, Validators.minLength(3)]],
-      deathdate: ['', [Validators.required]],
-  
-    })
-
-    this.authorsForm.valueChanges.subscribe((changes) => {
-      this.newAuthor = changes;
-    }) */
-  }
-
-}
-
-
-/* export class NewCharacterComponent implements OnInit {
-  newCharacter: any = {
+  newAuthor: any = {
     name: '',
-    race: '',
-    img: '',
+    birthdate:'',
+    deathdate:'',
+    nationality: '',
+    ocupation: '',
+    zodiacSign:'',
+    authorImg:'',
+    mostAwardWork:{
+      title:'',
+      img:'',
+    }
   };
-  characterForm!: FormGroup;
 
-  constructor(private characterService: CharactersService, private formBuilder: FormBuilder, private router: Router) {}
+  authorForm!: FormGroup;
+
+  constructor(
+    private authorsService: AuthorsService,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.characterForm = this.formBuilder.group({
+    this.authorForm = this.formBuilder.group({
       name: ['', [Validators.required]],
-      img: ['', [Validators.required, Validators.minLength(3)]],
-      race: ['', [Validators.required]],
-    })
-
-    this.characterForm.valueChanges.subscribe((changes) => {
-      this.newCharacter = changes;
-    })
+      birthdate:['', [Validators.required]],
+    deathdate: '',
+    nationality:['', [Validators.required]],
+    ocupation:['', [Validators.required]],
+    zodiacSign:['', [Validators.required]],
+    authorImg:['', [Validators.required]],
+    mostAwardWork:{
+      title:['', [Validators.required]],
+      img:['', [Validators.required]],
+    }})
+    this.authorForm.valueChanges.subscribe((changes) => {
+      this.newAuthor = changes;
+    });
   }
   onFileChange(event:any){
     const file = event.target.files[0];
-    console.log(file)
-    this.characterForm.patchValue({
+    console.log(file);
+    this.authorForm.patchValue({
       img: file
     })
-
   }
- onSubmit() {
+
+
+  onSubmit() {
     const formData = new FormData();
-    formData.append('img', this.characterForm.get('img')?.value);
-    formData.append('name', this.characterForm.get('name')?.value);
-    formData.append('race', this.characterForm.get('race')?.value);
-    this.characterService.postCharacter(formData).subscribe()
-    this.router.navigate(["/characters"])
+    formData.append('name', this.authorForm.get('name')?.value);
+    formData.append('birthdate', this.authorForm.get('birthdate')?.value);
+    formData.append('deathdate', this.authorForm.get('deathdate')?.value);
+    formData.append('nationality', this.authorForm.get('nationality')?.value);
+    formData.append('ocupation', this.authorForm.get('ocupation')?.value);
+    formData.append('zodiacSign', this.authorForm.get('zodiacSign')?.value);
+    formData.append('authorImg', this.authorForm.get('authorImg')?.value);
+    formData.append('title', this.authorForm.get('title')?.value);
+    formData.append('img', this.authorForm.get('img')?.value);
+    console.log(formData);
+    this.authorsService
+      .postAuthor(formData).subscribe(() => this.router.navigate(['/authors']));
   }
 }
-
- */

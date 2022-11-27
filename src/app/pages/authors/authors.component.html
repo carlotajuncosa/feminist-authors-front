@@ -1,5 +1,14 @@
-<div *ngFor="let item of myAuthors">
-  <p>{{ item.name }}</p>
-  <img src="{{ item.image }}" alt="auhtor image" height="300px" />
-  <button routerLink="/authors/{{ item.id }}">Ver más</button>
+<div class="main" *ngFor="let item of myAuthors">
+  <div class="main__card">
+    <p class="main__p">{{ item.name }}</p>
+    <img
+      class="main__img"
+      src="{{ item.image }}"
+      alt="auhtor image"
+      height="300px"
+    />
+    <button class="main__button" routerLink="/authors/{{ item.id }}">
+      Ver más
+    </button>
+  </div>
 </div>

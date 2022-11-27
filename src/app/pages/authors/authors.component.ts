@@ -6,7 +6,7 @@ import { AuthorsService } from '../../services/authors.service';
 @Component({
   selector: 'app-authors',
   templateUrl: './authors.component.html',
-  styleUrls: ['./authors.component.css'],
+  styleUrls: ['./authors.component.scss'],
 })
 export class AuthorsComponent implements OnInit {
   myAuthors?: any[];

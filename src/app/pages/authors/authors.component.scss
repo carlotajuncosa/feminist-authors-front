@@ -1,0 +1,45 @@
+.main {
+   display: flex;
+   padding: 2rem;
+   justify-content: center;
+  flex-direction: row;
+  
+  background-color: aqua;
+  gap: 10px;  
+
+  &__card {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+    background-color: white;
+    border: 2px solid black;
+
+  }
+
+  &__p {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+  &__img {
+    float: inherit;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid black;
+
+  }
+  &__button {
+    background-color: white;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: forrest;
+
+  }
+}

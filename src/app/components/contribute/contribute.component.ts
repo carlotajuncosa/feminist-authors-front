@@ -8,19 +8,19 @@ import { IAuthors } from 'src/app/models/interfaces';
   selector: 'app-contribute',
   templateUrl: './contribute.component.html',
   styleUrls: ['./contribute.component.css']
-})
+}) 
 export class ContributeComponent implements OnInit {
-  newAuthor: IAuthors ={
+  /* newAuthor: IAuthors ={
     name: '',
     birthdate: '',
     deathdate: '',
-  };
+  }; */
   authorsForm!: FormGroup;
   
-  constructor(private authorService: AuthorService, private formBuilder: FormBuilder, private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.authorForm = this.formBuilder.group({
+    /* this.authorForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       birthdate: ['', [Validators.required, Validators.minLength(3)]],
       deathdate: ['', [Validators.required]],
@@ -29,7 +29,7 @@ export class ContributeComponent implements OnInit {
 
     this.authorsForm.valueChanges.subscribe((changes) => {
       this.newAuthor = changes;
-    })
+    }) */
   }
 
 }

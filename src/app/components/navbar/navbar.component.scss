@@ -1,0 +1,126 @@
+.menu {
+  width: 100vw;
+  background-color: white;
+/*   height:8vh;
+ */  padding: 1em;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+  box-sizing: border-box;
+
+  &__button {
+    display: none;
+    background-color: white;
+    border: none;
+    @media screen and (max-width: 480px) {
+      display: flex;
+    }
+  }
+  &__svg {
+    width: 2em;
+    height: 2em;
+    fill: black;
+  }
+
+  &__nav {
+    @media screen and (max-width: 480px) {
+      display: none;
+      width: 100%;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+
+      &--active {
+        display: flex;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+  &__a {
+    margin: 0.5em;
+    text-decoration: none;
+    color: black;
+    @media screen and (max-width: 480px) {
+      margin: 0.5em 0;
+    }
+    &__a:hover {
+      color: blueviolet;
+    }
+  }
+}
+
+/* .menu__container{
+  background: orange;
+  height:10vh;
+  &__nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background: bisque;
+    &__button{
+     
+        background: crimson;
+        display: none;
+      
+        &__a {
+          text-decoration: none;
+          color: black;
+        }
+        a:hover {
+          color: blueviolet;
+         }
+    }
+    
+  }
+}
+
+
+
+
+
+.navbar__svg{
+
+}
+
+
+@media screen and (max-width: 480px){
+.navbar__button{
+  display: none;
+}
+}
+ */
+/*  @import "path/to/hamburgers"; 
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height:10vh;
+  flex-wrap: wrap;
+  background: orange;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+ color: blueviolet;
+}
+
+navbar__svg{
+
+} */

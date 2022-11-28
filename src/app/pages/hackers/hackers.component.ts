@@ -4,7 +4,7 @@ import { HackersService } from '../../services/hackers.service';
 @Component({
   selector: 'app-authors',
   templateUrl: './hackers.component.html',
-  styleUrls: ['./hackers.component.css'],
+  styleUrls: ['./hackers.component.scss'],
 })
 export class HackersComponent implements OnInit {
   myHackers?: any[];

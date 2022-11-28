@@ -1,7 +1,10 @@
-<div *ngFor="let item of myWaves">
-    <p>{{item.wave}}</p>
-    <p>{{item.century}}</p>
-    <p>{{item.description}}</p>
-    <img src="{{item.img}}" alt="wave image" height="300px"/>
-    <button routerLink="/waves/{{item.id}}">Ver más</button>
+<div class="waves">
+<div class="waves__card" *ngFor="let item of myWaves">
+    <div class="waves__text">
+    <h2 class="waves__h2">{{item.wave}}</h2>
+    <p class="waves__p">{{item.century}}</p>
+    <p class="waves__p">{{item.description}}</p>
+</div>
+    <img class="waves__img" src="{{item.img}}" alt="wave image" height="300px"/>
+</div>
 </div>

@@ -36,27 +36,29 @@ export class ContributeComponent implements OnInit {
     this.authorForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       birthdate:['', [Validators.required]],
-    deathdate: '',
-    nationality:['', [Validators.required]],
-    ocupation:['', [Validators.required]],
-    zodiacSign:['', [Validators.required]],
-    authorImg:['', [Validators.required]],
-    mostAwardWork:{
+      deathdate: '',
+      nationality:['', [Validators.required]],
+      ocupation:['', [Validators.required]],
+      zodiacSign:['', [Validators.required]],
+      authorImg:['', [Validators.required]],
       title:['', [Validators.required]],
       img:['', [Validators.required]],
-    }})
+    })
     this.authorForm.valueChanges.subscribe((changes) => {
       this.newAuthor = changes;
     });
   }
   onFileChange(event:any){
     const file = event.target.files[0];
+    const file1 = event.target.files[1];
+
     console.log(file);
     this.authorForm.patchValue({
-      img: file
+      authorImg: file,
+      img: file1
     })
   }
-
+  
 
   onSubmit() {
     const formData = new FormData();

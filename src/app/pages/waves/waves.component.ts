@@ -5,7 +5,7 @@ import { IWaves } from 'src/app/models/interfaces';
 @Component({
   selector: 'app-waves',
   templateUrl: './waves.component.html',
-  styleUrls: ['./waves.component.css']
+  styleUrls: ['./waves.component.scss']
 })
 export class WavesComponent implements OnInit {
   myWaves?: any[];

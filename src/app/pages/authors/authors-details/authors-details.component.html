@@ -1,10 +1,33 @@
-<div *ngIf="myAuthor">
-  <p>{{ myAuthor.name }}</p>
-  <p>Birthdate: {{ myAuthor.birthdate}}</p>
-  <p *ngIf="myAuthor.deathdate">Deathdate: {{ myAuthor.deathdate }}</p>
-  <p>Ocupation: {{ myAuthor.ocupation }}</p>
-  <p>Zodiac sign: {{ myAuthor.zodiacSign }}</p>
-  <img *ngIf="myAuthor.authorImg" src="{{ myAuthor.authorImg }}" alt="author image" height="300px" />
-  <p *ngIf="myAuthor.mostAwardWork.title">Zodiac sign: {{ myAuthor.mostAwardWork.title }}</p>
-  <img *ngIf="myAuthor.mostAwardWork.img" src="{{ myAuthor.mostAwardWork.img }}" alt="artwork image" height="300px" />
+<div class="detail">
+  <div class="detail__container" *ngIf="myAuthor">
+    <p class="detail__h2">{{ myAuthor.name }}</p>
+    <p class="detail__p">Birthdate: {{ myAuthor.birthdate }}</p>
+    <p class="detail__p" *ngIf="myAuthor.deathdate">
+      Deathdate: {{ myAuthor.deathdate }}
+    </p>
+    <p class="detail__p">Ocupation: {{ myAuthor.ocupation }}</p>
+    <p class="detail__p">Zodiac sign: {{ myAuthor.zodiacSign }}</p>
+    <img
+      class="detail__img"
+      *ngIf="myAuthor.authorImg"
+      src="{{ myAuthor.authorImg }}"
+      alt="author image"
+      height="300px"
+    />
+  </div>
+  <div class="detail__container--work">
+  <p class="detail__container--p">
+    Most Awarded Work
+  </p>
+  <p class="detail__container--h3" *ngIf="myAuthor.mostAwardWork.title">
+    {{ myAuthor.mostAwardWork.title }}
+  </p>
+  <img
+    class="detail__container--img"
+    *ngIf="myAuthor.mostAwardWork.img"
+    src="{{ myAuthor.mostAwardWork.img }}"
+    alt="artwork image"
+    height="300px"
+  />
+</div>
 </div>

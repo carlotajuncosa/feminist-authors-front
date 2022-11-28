@@ -70,7 +70,6 @@ export class ContributeComponent implements OnInit {
     formData.append('title', this.authorForm.get('title')?.value);
     formData.append('img', this.authorForm.get('img')?.value);
     console.log(formData);
-    this.authorsService
-      .postAuthor(formData).subscribe(() => this.router.navigate(['/authors']));
+    this.authorsService.postAuthor(formData).subscribe(() => this.router.navigate(['/authors']));
   }
 }

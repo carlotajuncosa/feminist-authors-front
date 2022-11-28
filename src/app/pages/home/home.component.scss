@@ -1,0 +1,39 @@
+.home {
+  border: solid black 2px;
+  padding: 10px 10px 25px 10px;
+  margin: 10px 25px;
+  text-align: center;
+  width: 50%;
+  margin: 5% auto;
+  float: center;
+
+  @media screen and (max-width: 780px) {
+    max-width: 400px;
+    width: 75%;
+  
+
+  }
+  @media screen and (max-width: 480px) {
+    max-width: 350px;
+    width: 75%;
+  
+
+  }
+  &__h2 {
+    font-size: 35px;
+    line-height: 60px;
+    padding: 0px 10px;
+  }
+  &__p {
+    font-size: 22px;
+    padding: 0px 10px;
+    padding: 25px;
+    line-height: 40px;
+  }
+  &__img {
+    width: 15px;
+  }
+  &__a {
+    text-decoration: none;
+  }
+}

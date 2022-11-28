@@ -6,7 +6,7 @@ import { AuthorsService } from './../../services/authors.service';
 @Component({
   selector: 'app-contribute',
   templateUrl: './contribute.component.html',
-  styleUrls: ['./contribute.component.css'],
+  styleUrls: ['./contribute.component.scss'],
 })
 export class ContributeComponent implements OnInit {
   authorsForm!: FormGroup;

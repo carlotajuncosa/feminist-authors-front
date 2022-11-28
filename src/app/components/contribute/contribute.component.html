@@ -1,12 +1,12 @@
-<form [formGroup]="authorForm" (ngSubmit)="onSubmit()">
-  <input type="text" placeholder="name" formControlName="name" />
-  <input type="date" placeholder="birthdate" formControlName="birthdate" />
-  <input type="date" placeholder="deathdate" formControlName="deathdate" />
-  <input type="text" placeholder="nationality" formControlName="nationality" />
-  <input type="text" placeholder="ocupation" formControlName="ocupation" />
-  <input type="text" placeholder="zodiacSign" formControlName="zodiacSign" />
-  <input type="file" formControlName="authorImg" (change)="onFileChange($event)">
-  <input type="text" placeholder="title" formControlName="title" />
-  <input type="file" formControlName="img" (change)="onFileChange($event)">
-  <button type="submit">añadir</button>
+<form class="form" [formGroup]="authorForm" (ngSubmit)="onSubmit()">
+  <input class="form__input" type="text" placeholder="Name" formControlName="name" />
+  <input class="form__input" type="date" placeholder="Birthdate" formControlName="birthdate" />
+  <input class="form__input" type="date" placeholder="Deathdate" formControlName="deathdate" />
+  <input class="form__input" type="text" placeholder="Nationality" formControlName="nationality" />
+  <input class="form__input" type="text" placeholder="Ocupation" formControlName="ocupation" />
+  <input class="form__input" type="text" placeholder="ZodiacSign" formControlName="zodiacSign" />
+  <input class="form__file" type="file" formControlName="authorImg" (change)="onFileChange($event)">
+  <input class="form__input" type="text" placeholder="Work title" formControlName="title" />
+  <input class="form__file" type="file" formControlName="img" (change)="onFileChange($event)">
+  <button class="form__button"type="submit">Añadir</button>
 </form>
